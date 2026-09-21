@@ -3,9 +3,8 @@
 для дальнейших операций
 над ними
 """
-from math import pi
+
 import numpy as np
-from matplotlib.patches import Polygon
 
 class Figure:
     def __init__(self) -> None:
@@ -96,7 +95,9 @@ class Circle(Figure):
 
 
 class Triangle(Figure):
-    def __init__(self, points=[(0, 0), (4, 0), (0, 3)]):
+    def __init__(self, points=None):
+        if points is None:
+            points=[(0, 0), (4, 0), (0, 3)]
         super().__init__()
         self.points : list[tuple] = points # координаты вершин
         self.parameters = [f"Points: {self.points}"]
