@@ -131,19 +131,3 @@ class FigurePlotter():
         plt.tight_layout()
         plt.show()
 
-
-def main():
-    triangle_points = [
-        (0, 0), 
-        (4, 0), 
-        (0, 3)
-        ]
-    
-    objects=[Rectangle(w=20, h=20, x0=-10, y0=-10), Circle(r=100)]
-    
-    plotter = FigurePlotter(objects)
-    plotter.calculateCoords().plotFigures()
-    
-
-if __name__ == "__main__":
-    main()
