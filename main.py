@@ -79,16 +79,31 @@ def test_op_difference():
     ]
     _run_operation_test(objects, "difference", "Разность (Круг - Прямоугольник)")
 
+def test_property_area():
+    rectangle = Rectangle()
+    circle = Circle()
+    triangle = Triangle()
+
+    objects = [rectangle, circle, triangle]
+    
+
+    print("-----------------------------------------")
+    print(f"Площади:\n")
+    for obj in objects:
+
+        print(f"{obj.name} - ({obj.parameters}): {obj.area:.4f} (у.е)")
+    print("-----------------------------------------")
+
 
 def tests_run():
 
     # test_centers_basic()
     
-    test_op_partial_intersection()
+    # test_op_partial_intersection()
     # test_op_full_containment()
     # test_op_no_intersection()
     # test_op_complex_overlap()
     # test_op_difference()
-
+    test_property_area()
 if __name__ == "__main__":
     tests_run()
