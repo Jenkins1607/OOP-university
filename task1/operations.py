@@ -13,6 +13,10 @@ import numpy as np
 
 class FigureOperations:
     def __init__(self, objects: list[Figure]):
+        if len(objects) !=2:
+                    return ValueError(
+                         f"Ожидается 2 объекта, передано: {len(objects)}"
+                         )
         self.objects = objects
         self.LEN_OBJECTS = len(self.objects)
         self.RESOLUTION = 200
@@ -93,7 +97,7 @@ class FigureOperations:
 
 
     def union(self):
-        "Объединение"
+        """Объединение"""
         mask = self.in_path1 | self.in_path2
         return self.points[mask]
 
