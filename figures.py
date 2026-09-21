@@ -127,22 +127,22 @@ class Triangle(Figure):
 
 
 
-# def main():
-# 
-#     rectangle = Rectangle()
-#     circle = Circle()
-#     triangle = Triangle(points=[(0, 0), (4, 0), (0, 3)])
+def main():
 
-#     objects = [rectangle, circle, triangle]
+    rectangle = Rectangle()
+    circle = Circle()
+    triangle = Triangle(points=[(0, 0), (4, 0), (0, 3)])
+
+    objects = [rectangle, circle, triangle]
     
 
-#     print("-----------------------------------------")
-#     print(f"Площади:\n")
-#     for obj in objects:
+    print("-----------------------------------------")
+    print(f"Площади:\n")
+    for obj in objects:
 
-#         print(f"{obj.name}: {obj.area} (у.е)")
-#     print("-----------------------------------------")
+        print(f"{obj.name}: {obj.area:.4f} (у.е)")
+    print("-----------------------------------------")
 
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
