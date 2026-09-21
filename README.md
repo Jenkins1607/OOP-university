@@ -28,7 +28,7 @@ OOP-university/
 
 Ниже представлены примеры работы программы при построении фигур и выполнении логических операций:
 
-![Визуализация исходных фигур](https://raw.githubusercontent.com/Jenkins1607/OOP-university/135c40685393eeea7bcc4a9e3df1112c8a8fb966/task1/images/example_1.png)
+![Визуализация исходных фигур](https://raw.githubusercontent.com/Jenkins1607/OOP-university/135c40685393eeea7bcc4a9e3df1112c8a8fb966/example_1.png)
 
-![Результат операции пересечения над фигурами](https://raw.githubusercontent.com/Jenkins1607/OOP-university/135c40685393eeea7bcc4a9e3df1112c8a8fb966/task1/images/example_2.png)
+![Результат операции пересечения над фигурами](https://raw.githubusercontent.com/Jenkins1607/OOP-university/135c40685393eeea7bcc4a9e3df1112c8a8fb966/example_2.png)
 
