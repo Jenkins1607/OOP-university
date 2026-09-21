@@ -22,7 +22,7 @@ OOP-university/
 │   ├── figures.py
 │   └── ...
 ── README.md
-
+```
 
 ## Примеры визуализации
 
