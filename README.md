@@ -17,8 +17,8 @@
 ```text
 OOP-university/
 task1/
-── figures.py          # Модуль с классами фигур
-├── centers.py          # Модуль визуализации (FigurePlotter)
+|── figures.py          # Модуль с классами фигур
+├── plotter.py          # Модуль визуализации (FigurePlotter)
 ├── operations.py       # Модуль логических операций (FigureOperations)
 ├── main.py             # Точка входа и тестовые сценарии
 └── requirements.txt    # Зависимости
