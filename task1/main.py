@@ -7,7 +7,7 @@ def _run_operation_test(objects: list, operation: str, description: str):
     """
     Вспомогательная функция для запуска и отрисовки логической операции.
     """
-    print(f"\n▶ Запуск: {description} (Операция: {operation})")
+    print(f"\nЗапуск: {description} (Операция: {operation})")
     
     ops = FigureOperations(objects)
     ops.prepare()
@@ -72,7 +72,7 @@ def test_op_complex_overlap():
     _run_operation_test(objects, "intersection", "Сложное наложение (пересечение)")
 
 def test_op_difference():
-    """Тест разности: Круг минус Прямоугольник"""
+    """5. Тест разности: Круг минус Прямоугольник"""
     objects = [
         Circle(r=10, x_0=0, y_0=0), 
         Rectangle(w=8, h=8, x0=2, y0=2)
@@ -80,6 +80,7 @@ def test_op_difference():
     _run_operation_test(objects, "difference", "Разность (Круг - Прямоугольник)")
 
 def test_property_area():
+    """6. Тест подсчета площади фигур"""
     rectangle = Rectangle()
     circle = Circle()
     triangle = Triangle()
@@ -95,16 +96,16 @@ def test_property_area():
     print("-----------------------------------------")
 
 
-def tests_run():
+def main():
 
     test_centers_basic()
     
-    # test_op_partial_intersection()
-    # test_op_full_containment()
-    # test_op_no_intersection()
-    # test_op_complex_overlap()
-    # test_op_difference()
-    # test_property_area()
+    test_op_partial_intersection()
+    test_op_full_containment()
+    test_op_no_intersection()
+    test_op_complex_overlap()
+    test_op_difference()
+    test_property_area()
     
 if __name__ == "__main__":
-    tests_run()
+    main()
