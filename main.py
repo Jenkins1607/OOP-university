@@ -82,9 +82,9 @@ def test_op_difference():
 
 def tests_run():
 
-    test_centers_basic()
+    # test_centers_basic()
     
-    # test_op_partial_intersection()
+    test_op_partial_intersection()
     # test_op_full_containment()
     # test_op_no_intersection()
     # test_op_complex_overlap()
