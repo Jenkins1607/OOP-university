@@ -36,6 +36,7 @@ class Rectangle(Figure):
         self.x0 = x0 
         self.y0 = y0
 
+        self.parameters = [f"width: {self.w}", f"height: {self.h}"]
 
     def getCenter(self) -> tuple[float, float]:
         x_center = (self.x0 + self.x0 + self.w) / 2
@@ -62,6 +63,8 @@ class Circle(Figure):
         # кординаты центра окружности (по умолчанию (0, 0))
         self.x_0 = x_0
         self.y_0 = y_0
+
+        self.parameters = [f"Radius:{self.r}"]
 
 
     def getCenter(self) -> tuple[float, float]:
@@ -93,10 +96,10 @@ class Circle(Figure):
 
 
 class Triangle(Figure):
-    def __init__(self, points):
+    def __init__(self, points=[(0, 0), (4, 0), (0, 3)]):
         super().__init__()
         self.points : list[tuple] = points # координаты вершин
-
+        self.parameters = [f"Points: {self.points}"]
         limit_reach = len(self.points) != 3
 
         if limit_reach:
@@ -125,24 +128,3 @@ class Triangle(Figure):
         (x1, y1), (x2, y2), (x3, y3) = self.points
         return 0.5 * abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
 
-
-
-def main():
-
-    rectangle = Rectangle()
-    circle = Circle()
-    triangle = Triangle(points=[(0, 0), (4, 0), (0, 3)])
-
-    objects = [rectangle, circle, triangle]
-    
-
-    print("-----------------------------------------")
-    print(f"Площади:\n")
-    for obj in objects:
-
-        print(f"{obj.name}: {obj.area:.4f} (у.е)")
-    print("-----------------------------------------")
-
-
-if __name__ == "__main__":
-    main()
