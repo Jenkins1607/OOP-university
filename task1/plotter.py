@@ -24,6 +24,7 @@ class FigurePlotter():
         self.Y_MAX = None
         self.Y_MIN = None
         self.EQUAL = 'equal' # одинаковость осей пиксель к пикселю
+        self.PADDING = 5
         # параметры отображения фигур 
         self.LINEWIDTH = 1
         self.ZORDER = 3 # порядок отображения
@@ -90,8 +91,8 @@ class FigurePlotter():
         # настройка осей 
         ax = plt.gca()
         ax.set_aspect(self.EQUAL)
-        ax.set_xlim(self.X_MIN - 3, self.X_MAX + 3)
-        ax.set_ylim(self.Y_MIN - 3, self.Y_MAX + 3)
+        ax.set_xlim(self.X_MIN - self.PADDING, self.X_MAX + self.PADDING)
+        ax.set_ylim(self.Y_MIN - self.PADDING, self.Y_MAX + self.PADDING)
         
         for i in range(self.LEN_OBJECTS):
             plt.plot(
